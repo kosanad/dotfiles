@@ -1,0 +1,2 @@
+3.0
+{'The-NERD-tree': {'checked_time': 1394784567, 'installed_uri': 'https://github.com/vim-scripts/The-NERD-tree.git', 'installed_path': '/Users/a12170/dotfiles/.vim/bundle/The-NERD-tree', 'revisions': {'1325726606': 'af65bd23e69a3a5fc1a39eb47733191b7110bb1e'}, 'updated_time': '1325726606'}, 'neobundle.vim': {'checked_time': 1394784564, 'installed_uri': 'https://github.com/Shougo/neobundle.vim.git', 'installed_path': '/Users/a12170/dotfiles/.vim/bundle/neobundle.vim', 'revisions': {}, 'updated_time': 1394784564}}
