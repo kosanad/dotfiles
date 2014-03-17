@@ -29,5 +29,7 @@ if has('vim_starting') &&  file_name == ""
 endif
 "--------------------------------------------------
 
+NeoBundleCheck
+
 filetype plugin indent on
 
