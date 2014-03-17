@@ -15,7 +15,7 @@ call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
 " インストールしたいプラグイン
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'The-NERD-tree'
 
 "--------------------------------------------------
