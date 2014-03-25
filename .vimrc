@@ -27,6 +27,9 @@ let file_name = expand("%:p")
 if has('vim_starting') &&  file_name == ""
   autocmd VimEnter * execute 'NERDTree ./'
 endif
+"NERDTreeのツリーの幅
+"Default: 31.
+let g:NERDTreeWinSize=70
 "--------------------------------------------------
 
 NeoBundleCheck
