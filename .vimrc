@@ -4,7 +4,16 @@ filetype plugin indent off
 syntax on
 set nu
 set hlsearch
-set paste
+"set paste
+set ignorecase
+
+"--------------------------------------------------
+"インデントをタブじゃなくてスペース4つにする
+set tabstop=4
+set autoindent
+set expandtab
+set shiftwidth=4
+"--------------------------------------------------
 
 if has('vim_starting')
   set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
@@ -29,7 +38,7 @@ if has('vim_starting') &&  file_name == ""
 endif
 "NERDTreeのツリーの幅
 "Default: 31.
-let g:NERDTreeWinSize=70
+let g:NERDTreeWinSize=40
 "--------------------------------------------------
 
 NeoBundleCheck
