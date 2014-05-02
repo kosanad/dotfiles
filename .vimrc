@@ -4,8 +4,11 @@ filetype plugin indent off
 syntax on
 set nu
 set hlsearch
-"set paste
 set ignorecase
+set cursorline
+
+set list
+set listchars=tab:»-,trail:»,eol:↲,extends:»,precedes:«,nbsp:% " 不可視文字の表示記号指定
 
 "--------------------------------------------------
 "インデントをタブじゃなくてスペース4つにする
@@ -25,7 +28,9 @@ call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'The-NERD-tree'
+NeoBundle 'scrooloose/syntastic'
 
 "--------------------------------------------------
 "NERDTree用の設定
@@ -39,6 +44,34 @@ endif
 "NERDTreeのツリーの幅
 "Default: 31.
 let g:NERDTreeWinSize=40
+"--------------------------------------------------
+
+"--------------------------------------------------
+"neocomplete用の設定
+let g:neocomplete#enable_at_startup = 1
+"--------------------------------------------------
+
+"--------------------------------------------------
+"syntastic用の設定
+let g:syntastic_enable_signs = 1
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_json_checkers = ['jsonlint']
+let g:syntastic_javascript_checkers = [
+      \ 'jshint',
+      \ 'jscs',
+      \ ]
+" AngularJSのエラーを回避
+let g:syntastic_html_tidy_ignore_errors = [' proprietary attribute "ng-']
+let g:syntastic_mode_map = { 'mode': 'active',
+      \ 'active_filetypes': ['perl'],
+      \ 'passive_filetypes': ['php']
+      \ }
+
+" ,scで構文チェック
+nnoremap ,sc :<C-u>SyntasticCheck<CR>
+
+autocmd BufReadPost,BufNewFile .jshintrc setl filetype=json
 "--------------------------------------------------
 
 NeoBundleCheck
