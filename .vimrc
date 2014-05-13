@@ -33,6 +33,7 @@ NeoBundle 'Shougo/neosnippet'
 "NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'moll/vim-node'
 
 "--------------------------------------------------
 "NERDTree用の設定
@@ -99,12 +100,23 @@ endif
 " 自分用 snippet ファイルの場所
 let s:my_snippet = '~/dotfiles/snippet/'
 let g:neosnippet#snippets_directory = s:my_snippet
+
+" 縦分割版gf
+nnoremap gs :vertical wincmd f<CR>
 "--------------------------------------------------
 
 "--------------------------------------------------
 noremap <Space>h ^
 noremap <Space>l $
 nnoremap <Space>w <C-w>
+noremap <Space>> <C-w>30>
+noremap <Space>< <C-w>30<
+
+" 検索結果を中心に持ってくる
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
 "--------------------------------------------------
 
 NeoBundleCheck
