@@ -6,6 +6,7 @@ set nu
 set hlsearch
 set ignorecase
 set cursorline
+set clipboard+=unnamed
 
 set list
 set listchars=tab:»-,trail:»,eol:↲,extends:»,precedes:«,nbsp:% " 不可視文字の表示記号指定
@@ -108,6 +109,8 @@ nnoremap gs :vertical wincmd f<CR>
 "--------------------------------------------------
 noremap <Space>h ^
 noremap <Space>l $
+noremap <Space>j G
+noremap <Space>k gg
 nnoremap <Space>w <C-w>
 noremap <Space>> <C-w>30>
 noremap <Space>< <C-w>30<
